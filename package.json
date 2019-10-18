@@ -1,8 +1,19 @@
 {
+  "name": "truber-api",
+  "version": "0.0.1",
+  "description": "API for truber",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon server.js"
+  },
+  "keywords": [],
+  "author": "Matias Codina",
   "dependencies": {
     "graphql": "^14.5.8",
     "koa": "^2.10.0",
     "koa-graphql": "^0.8.0",
+    "koa-logger": "^3.2.1",
     "koa-mount": "^4.0.0",
     "mongoose": "^5.7.5"
   },
