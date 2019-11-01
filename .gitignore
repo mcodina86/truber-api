@@ -62,3 +62,7 @@ typings/
 
 # KDE
 .directory
+
+# Docker
+postgres-data/
+.dockerignore

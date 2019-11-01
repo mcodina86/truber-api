@@ -6,10 +6,18 @@ services:
       - .:/var/www/app
       - /var/www/app/node_modules
     ports:
-    - "5000:5000"
+      - '5000:5000'
     depends_on:
-    - mongo
-  mongo:
-    image: mongo
+      - db
+
+  db:
+    image: 'postgres'
+    container_name: 'truberdb'
+    environment:
+      - POSTGRES_USER=mcodina
+      - POSTGRES_PASSWORD=MoonPencilCrisis
+      - POSTGRES_DB=truberdb
     ports:
-    - "27015:27015"
+      - '5432:5432'
+    volumes:
+      - ./postgres-data:/var/lib/postgresql/data
